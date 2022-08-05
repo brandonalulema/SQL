@@ -1,0 +1,40 @@
+#create a database of famous singers. Create multiple tables and answer the questions 
+using joins. “Who are the singers?”, “What songs did they write?”, “Where are they from?”
+
+#creating the tables
+CREATE TABLE singers (id INTEGER PRIMARY KEY, 
+name TEXT, 
+age INTEGER, 
+birthyear INTEGER);
+INSERT INTO singers VALUES (1, "Usher", 44, 1978);
+INSERT INTO singers VALUES (2, "Adele", 34, 1988);
+INSERT INTO singers VALUES (3, "Justin Timberlake", 41, 1981);
+INSERT INTO singers VALUES (4, "Harry Styles", 28, 1994);
+INSERT INTO singers VALUES (5, "Billie Eilish", 20, 2001);
+
+CREATE TABLE info (id INTEGER PRIMARY KEY,
+singer_id INTEGER,
+song_title TEXT);
+INSERT INTO info VALUES (1, 1, "Yeah!");
+INSERT INTO info VALUES (2, 2, "Somebody Like You");
+INSERT INTO info VALUES (3, 3, "Mirrors");
+INSERT INTO info VALUES (4, 4, "Watermelon Sugar");
+INSERT INTO info VALUES (5, 5, "bad guy");
+
+CREATE TABLE etc (id INTEGER PRIMARY KEY,
+singer_id INTEGER,
+birthplace TEXT);
+INSERT INTO etc VALUES (1, 1, "United States");
+INSERT INTO etc VALUES (2, 2, "England");
+INSERT INTO etc VALUES (3, 3, "United States");
+INSERT INTO etc VALUES (4, 4, "England");
+INSERT INTO etc VALUES (5, 5, "United States");
+
+
+#displaying who the singers are, what songs they wrote, and where they are from.
+SELECT singers.name, etc.birthplace, info.song_title
+FROM singers
+JOIN info
+ON singers.id = info.singer_id
+JOIN etc
+ON singers.id = etc.singer_id;
