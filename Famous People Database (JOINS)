@@ -1,7 +1,7 @@
-#create a database of famous singers. Create multiple tables and answer the questions 
-using joins. “Who are the singers?”, “What songs did they write?”, “Where are they from?”
+/* create a database of famous singers. Create multiple tables and answer the questions 
+using joins. “Who are the singers?”, “What songs did they write?”, “Where are they from?” */
 
-#creating the tables
+/* creating the tables */
 CREATE TABLE singers (id INTEGER PRIMARY KEY, 
 name TEXT, 
 age INTEGER, 
@@ -31,7 +31,7 @@ INSERT INTO etc VALUES (4, 4, "England");
 INSERT INTO etc VALUES (5, 5, "United States");
 
 
-#displaying who the singers are, what songs they wrote, and where they are from.
+/* displaying who the singers are, what songs they wrote, and where they are from. */
 SELECT singers.name, etc.birthplace, info.song_title
 FROM singers
 JOIN info
