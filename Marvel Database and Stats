@@ -1,5 +1,6 @@
-#Creating a database on marvel heroes
+/* creating a database on marvel heroes */
 
+/* creating the tables */
 CREATE TABLE marvels (ID INTEGER PRIMARY KEY,
     name TEXT,
     popularity INTEGER,
@@ -42,16 +43,16 @@ INSERT INTO marvels VALUES(24, "Venon", 78, "Neutral", "Male", 1.90, 118, "EUA",
 INSERT INTO marvels VALUES(25, "Juggernaut", 76, "Neutral", "Male", 2.87, 862, "EUA", 2, 7, 2, 7, 1, 4);
 INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA", 5, 2, 2, 2, 5, 3);
 
-#displays the average, max and min popularity levels
+/* displays the average, max and min popularity levels */
 SELECT AVG(popularity), max(popularity), min(popularity)
 FROM marvels;
 
-#displays the average, max and min popularity levels among male super heroes
+/* displays the average, max and min popularity levels among male super heroes */
 SELECT AVG(popularity), max(popularity), min(popularity)
 FROM marvels
 WHERE gender = "Male";
 
-#displays the number of fighters at every skill level
+/* displays the number of fighters at every skill level */
 SELECT COUNT(*) as Number_of_fighters,
 CASE
 WHEN fighting_Skills >= 6 THEN "Great Fighters"
@@ -66,7 +67,7 @@ FROM marvels
 GROUP BY "Description"
 ORDER BY Number_of_fighters DESC;
 
-#displays all heroes that are "good" and "male"
+/* displays all heroes that are "good" and "male" */
 SELECT *
 FROM marvels
 WHERE alignment = "Good" AND gender = "Male";
