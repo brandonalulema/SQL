@@ -1,6 +1,6 @@
-/*Create a technology store database*/
+/* Create a technology store database */
 
-/*creating the table*/
+/* creating the table */
 CREATE TABLE phone_store(id INTEGER PRIMARY KEY, name TEXT, data_size INTEGER, color TEXT, price INTEGER);
 
 INSERT INTO phone_store VALUES (1, "IPhone", 32, "Black", 200);
@@ -19,8 +19,8 @@ INSERT INTO phone_store VALUES (13, "IPhone 7", 32, "Blue", 900);
 INSERT INTO phone_store VALUES (14, "IPhone 7 Plus", 128, "Space Grey", 350);
 INSERT INTO phone_store VALUES (15, "IPhone 8", 225, "Black", 500);
 
-/*displays the database ordered by price.*/
+/* displays the database ordered by price */
 SELECT * FROM phone_store ORDER BY price;
 
-/*displays the most expensive price from the store*/
+/* displays the most expensive price from the store */
 SELECT MAX(price) FROM phone_store;
