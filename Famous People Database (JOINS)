@@ -31,7 +31,7 @@ INSERT INTO etc VALUES (4, 4, "England");
 INSERT INTO etc VALUES (5, 5, "United States");
 
 
-/* displaying who the singers are, what songs they wrote, and where they are from. */
+/* displaying who the singers are, what songs they wrote, and where they are from */
 SELECT singers.name, etc.birthplace, info.song_title
 FROM singers
 JOIN info
