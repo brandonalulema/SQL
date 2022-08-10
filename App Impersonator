@@ -1,6 +1,6 @@
-/*creating a database on my favorite app that stores data from users*/
+/* creating a database on my favorite app that stores data from users */
 
-/*creating the table*/
+/* creating the table */
 CREATE TABLE afk_arena (player_id INTEGER PRIMARY KEY, 
 profile_name TEXT,
 diamonds INTEGER,
@@ -18,7 +18,7 @@ INSERT INTO afk_arena VALUES (6, "Destiny86", 80, 60, 8, 3);
 INSERT INTO afk_arena VALUES (7, "JumboWumbo", 12, 50, 2, 1);
 INSERT INTO afk_arena VALUES (8, "BDizzle08", 1000,2000, 20, 15);
 
-/*updating information using different 'WHERE'*/
+/* updating information using different 'WHERE' */
 UPDATE afk_arena SET high_score = 25
 WHERE player_id = 8;
 UPDATE afk_arena SET hours_played = 10
@@ -28,7 +28,7 @@ WHERE player_id = 1;
 
 SELECT * FROM afk_arena;
 
-/*deleting a user who uninstalled the app*/
+/* deleting a user who uninstalled the app */
 DELETE FROM afk_arena 
 WHERE profile_name = "JumboWumbo";
 
