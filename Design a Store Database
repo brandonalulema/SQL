@@ -1,4 +1,4 @@
-/* Create a technology store database */
+/* create a technology store database */
 
 /* creating the table */
 CREATE TABLE phone_store(id INTEGER PRIMARY KEY, name TEXT, data_size INTEGER, color TEXT, price INTEGER);
