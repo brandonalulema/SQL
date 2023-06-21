@@ -1,0 +1,19 @@
+1. /*Query an alphabetically ordered list of all names in OCCUPATIONS, immediately followed by the first letter of each profession as a parenthetical 
+(i.e.: enclosed in parentheses). For example: AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).
+Query the number of ocurrences of each occupation in OCCUPATIONS. Sort the occurrences in ascending order, and output them in the following format:*/
+
+  //Grabs the Names and then concats the first letter of the 'Occupation' column value which is then
+  //surrounded by parenthesis. We order it by Name by default ASC.
+
+    SELECT CONCAT(NAME,'(',LEFT(OCCUPATION, 1),')') 
+    FROM OCCUPATIONS 
+    ORDER BY NAME;
+
+  //Concats the string with a count of all values along with the value of the occupation
+  //and then groups it by occupation, so if there are 4 values in occupation, it will show how 
+  //many times each of the 4 values in occupation are repeated. 
+
+    SELECT CONCAT('There are a total of ', COUNT(*), ' ', LOWER(OCCUPATION), 's.') 
+    FROM OCCUPATIONS 
+    GROUP BY OCCUPATION 
+    ORDER BY COUNT(*), OCCUPATION;
